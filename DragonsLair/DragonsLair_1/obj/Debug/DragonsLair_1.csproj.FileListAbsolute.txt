@@ -1,0 +1,8 @@
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\bin\Debug\DragonsLair_1.exe.config
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\bin\Debug\DragonsLair_1.exe
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\bin\Debug\DragonsLair_1.pdb
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\obj\Debug\DragonsLair_1.csprojResolveAssemblyReference.cache
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\obj\Debug\DragonsLair_1.csproj.CoreCompileInputs.cache
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\obj\Debug\DragonsLair_1.exe
+C:\Users\bruger\Documents\Visual Studio 2017\Projects\DragonsLair\DragonsLair_1\obj\Debug\DragonsLair_1.pdb
