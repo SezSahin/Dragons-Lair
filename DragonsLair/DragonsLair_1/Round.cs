@@ -83,13 +83,31 @@ namespace DragonsLair_1
         //extra
         public bool IsRoundFinished()
         {
-            return false;
+            
+            for(int i = 0; i < matches.Count; i++)
+            {
+                if (matches[i].Winner == null)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         //extra
-        public void GetFreeRider()
+        public Team GetFreeRider()
         {
-            
+
+            Team freerider = new Team("");
+
+            int numberofteams = 8;
+
+            if (numberofteams % 2 == 1)
+            {
+                freerider.Name = "The Corinthians";
+                return freerider;
+            }
+            return null;
         }
 
         //extra
