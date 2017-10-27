@@ -6,6 +6,12 @@ namespace DragonsLair_1
     {
         public string Name { get; set; }
 
+        //teams er tillagt 
+        private List<Team> teams = new List<Team>();
+
+        //rounds er tillagt
+        private List<Round> rounds = new List<Round>();
+
         public Tournament(string tournamentName)
         {
             Name = tournamentName;
@@ -83,6 +89,14 @@ namespace DragonsLair_1
                 r.AddMatch(match1);
             }
             return r;
+        }
+
+        public void Add(Round round) {
+
+        }
+
+        public void SetStatus(Round status) {
+
         }
     }
 }

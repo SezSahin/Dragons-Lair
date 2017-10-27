@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿
+using System.Collections.Generic;
 
 namespace DragonsLair_1
 {
@@ -77,6 +78,21 @@ namespace DragonsLair_1
                 }
             }
             return losers;
+        }
+
+        public bool IsRoundFinished()
+        {
+            return false;
+        }
+
+        public void GetFreeRider()
+        {
+            
+        }
+
+        public void Add(Team freeRider)
+        {
+
         }
     }
 }
