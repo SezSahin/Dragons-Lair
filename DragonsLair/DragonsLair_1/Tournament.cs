@@ -100,9 +100,12 @@ namespace DragonsLair_1
         }
 
         //extra
-        public void SetStatus(Round status)
+        public bool SetStatus(bool status)
         {
-            
+            if (status) {
+                return true;
+            }
+            return false;
         }
     }
 }
