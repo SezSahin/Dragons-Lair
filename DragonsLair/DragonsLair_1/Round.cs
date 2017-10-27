@@ -18,27 +18,29 @@ namespace DragonsLair_1
         public Match GetMatch(string teamName1, string teamName2)
         {
             //ikke del af template
-            Match a = new Match();
-            teamName1 = "";
-            teamName2 = "";
+            Match match = new Match();
+            match.FirstOpponent.Name = teamName1;
+            match.SecondOpponent.Name = teamName2;
+            //teamName1 = "";
+            //teamName2 = "";
             // TODO: Implement this method
-            foreach (Match x in matches) {
-                if (teamName1 == "")
-                {
-                    teamName1 = x.FirstOpponent.Name;
-                }
-                if(teamName1 != "" && teamName2 == "")
-                {
-                    teamName2 = x.SecondOpponent.Name;
-                }
-                if(teamName1 != "" && teamName2 != "")
-                {
-                    a.FirstOpponent = new Team(teamName1);
-                    a.SecondOpponent = new Team(teamName2);
-                    break;
-                }
-            }
-            return a;
+            //foreach (Match x in matches) {
+            //    if (teamName1 == "")
+            //    {
+            //        teamName1 = x.FirstOpponent.Name;
+            //    }
+            //    if(teamName1 != "" && teamName2 == "")
+            //    {
+            //        teamName2 = x.SecondOpponent.Name;
+            //    }
+            //    if(teamName1 != "" && teamName2 != "")
+            //    {
+            //        a.FirstOpponent = new Team(teamName1);
+            //        a.SecondOpponent = new Team(teamName2);
+            //        break;
+            //    }
+            //}
+            return match;
             
             
         }
