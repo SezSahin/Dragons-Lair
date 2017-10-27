@@ -6,14 +6,18 @@ namespace DragonsLair_1
     public class Round
     {
         private List<Match> matches = new List<Match>();
-        
+
+        private Team freerider = new Team("");
+
         public void AddMatch(Match m)
         {
             matches.Add(m);
         }
 
+        
         public Match GetMatch(string teamName1, string teamName2)
         {
+            //ikke del af template
             Match a = new Match();
             teamName1 = "";
             teamName2 = "";
@@ -98,22 +102,31 @@ namespace DragonsLair_1
         public Team GetFreeRider()
         {
 
-            Team freerider = new Team("");
+            //Team freerider = new Team("");
 
-            int numberofteams = 8;
+            //int numberofteams = 8;
 
-            if (numberofteams % 2 == 1)
-            {
-                freerider.Name = "The Corinthians";
-                return freerider;
-            }
-            return null;
+            //if (numberofteams % 2 == 1)
+            //{
+            //    freerider.Name = "The Corinthians";
+            //    return freerider;
+            //}
+            //return null;
+            return this.freerider;
         }
 
         //extra
         public void Add(Team freeRider)
         {
+            //int numberofteams = 8;
 
+            this.freerider = freeRider;
+
+
+        }
+
+        public void Add(Match match) {
+            matches.Add(match);
         }
     }
 }

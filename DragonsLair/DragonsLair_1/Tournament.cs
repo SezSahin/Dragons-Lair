@@ -92,13 +92,17 @@ namespace DragonsLair_1
         }
 
         //extra
-        public void Add(Round round) {
+        public void Add(Round round)
+        {
+
+            rounds.Add(round);
 
         }
 
         //extra
-        public void SetStatus(Round status) {
-
+        public void SetStatus(Round status)
+        {
+            
         }
     }
 }
