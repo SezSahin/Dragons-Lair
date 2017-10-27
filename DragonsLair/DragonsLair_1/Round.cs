@@ -80,16 +80,19 @@ namespace DragonsLair_1
             return losers;
         }
 
+        //extra
         public bool IsRoundFinished()
         {
             return false;
         }
 
+        //extra
         public void GetFreeRider()
         {
             
         }
 
+        //extra
         public void Add(Team freeRider)
         {
 
