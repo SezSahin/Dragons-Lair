@@ -31,7 +31,7 @@ namespace DragonsLair_1
             Round lastRound;
 
             bool isRoundFinished;
-
+            //[numberOrRounds = 0]
             if (numberOfRound == 0)
             {
                 teams = tournament.GetTeams();
@@ -40,7 +40,7 @@ namespace DragonsLair_1
             {
                 lastRound = tournament.GetRound(numberOfRound - 1);
                 isRoundFinished = round.IsRoundFinished();
-
+                //[isRoundFinished]
                 if (isRoundFinished)
                 {
                     teams = round.GetWinningTeams();
@@ -79,7 +79,7 @@ namespace DragonsLair_1
                         teams = scrambled;
 
                         Round newRound = new Round();
-
+                        //[teams has at least two members]
                         if (teams.Count % 2 == 1)
                         {
                             Team oldFreeRider = round.GetFreeRider();
@@ -87,7 +87,7 @@ namespace DragonsLair_1
                             Team newFreeRider = round.GetFreeRider();
 
                             int x = 0;
-
+                            //[loop until newFreeRider <> oldFreeRider]
                             while (newFreeRider == oldFreeRider)
                             {
                                 newFreeRider = teams[x];
@@ -97,7 +97,7 @@ namespace DragonsLair_1
                             teams.Remove(newFreeRider);
 
                             newRound.Add(newFreeRider);
-
+                            //[loop for all pairs]
                             while (teams.Count > 0)
                             {
                                 Match match = new Match();
