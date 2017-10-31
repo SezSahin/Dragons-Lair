@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace DragonsLair_1
 {
@@ -13,7 +14,37 @@ namespace DragonsLair_1
              * TODO: Calculate for each team how many times they have won
              * Sort based on number of matches won (descending)
              */
-            Console.WriteLine("Implement this method!");
+            Tournament t = tournamentRepository.GetTournament(tournamentName);
+            List<Team> team = t.GetTeams();
+            int[] score = new int[team.Count];
+            int[] sortedscore = new int[team.Count];
+            List<Team> sortedteam = t.GetTeams();
+            for (int i = 0; i < t.GetNumberOfRounds(); i++)
+            {
+                Round currentround = t.GetRound(i);
+                List<Team> winningteams = currentround.GetWinningTeams();
+                foreach (Team x in team) {
+                    foreach (Team y in winningteams) {
+
+                        if (x.Name == y.Name) {
+                            score[team.IndexOf(x)] += 1;
+                        }
+                    }
+                }
+
+            }
+            
+            for (int i = 0; i < team.Count; i++) {
+                int index = Array.IndexOf(score, score.Max());
+                sortedteam[i] = team[index];
+                sortedscore[i] = score[index];
+                score[index] = -1;
+            }
+            
+            for (int i = 0; i < team.Count; i++) {
+                Console.WriteLine("Team: " + sortedteam[i].Name + "   Score: " + sortedscore[i]);
+            }
+
         }
 
         public void ScheduleNewRound(string tournamentName, bool printNewMatches = true)
