@@ -171,7 +171,9 @@ namespace DragonsLair_1
             {
                 Team w = t.GetTeam(winningTeam);
                 m.Winner = w;
-                Console.WriteLine("WINNER IS: ------------> " + m.Winner.Name + " <--------------");
+                Console.WriteLine("Team1: " + m.FirstOpponent.Name);
+                Console.WriteLine("Team2: " + m.SecondOpponent.Name);
+                Console.WriteLine("Winner: " + m.Winner.Name);
             }
             else{
                 //Console.ForegroundColor = ConsoleColor.Red;
