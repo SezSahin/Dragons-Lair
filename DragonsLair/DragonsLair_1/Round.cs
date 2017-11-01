@@ -14,6 +14,11 @@ namespace DragonsLair_1
             matches.Add(m);
         }
 
+        public Match GetMatch(string winner){
+            Match match = new Match();
+            match.Winner.Name = winner;
+            return match;
+        }
         
         public Match GetMatch(string teamName1, string teamName2)
         {

@@ -166,6 +166,16 @@ namespace DragonsLair_1
             Tournament t = tournamentRepository.GetTournament(tournamentName);
             Round r = t.GetRound(roundNumber - 1);
             Match m = r.GetMatch(winningTeam);
+
+            if (m != null && m.Winner == null)
+            {
+                Team w = t.GetTeam(winningTeam);
+                m.Winner = w;
+                Console.WriteLine("Succes");
+            }
+            else {
+                throw new Exception("fail");
+            }
         }
     }
 }

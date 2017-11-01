@@ -107,5 +107,10 @@ namespace DragonsLair_1
             }
             return false;
         }
+
+        public Team GetTeam(string winner) {
+            return new Team(winner);
+
+        }
     }
 }
