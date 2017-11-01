@@ -165,16 +165,19 @@ namespace DragonsLair_1
         {
             Tournament t = tournamentRepository.GetTournament(tournamentName);
             Round r = t.GetRound(roundNumber - 1);
-            Match m = r.GetMatch(winningTeam);
+            Match m = r.GetMatch(team1, team2);
 
             if (m != null && m.Winner == null)
             {
                 Team w = t.GetTeam(winningTeam);
                 m.Winner = w;
-                Console.WriteLine("Succes");
+                Console.WriteLine("WINNER IS: ------------> " + m.Winner.Name + " <--------------");
             }
-            else {
-                throw new Exception("fail");
+            else{
+                //Console.ForegroundColor = ConsoleColor.Red;
+                //Console.WriteLine("Fail!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+                //Console.ResetColor();
+                throw new Exception("Error");
             }
         }
     }

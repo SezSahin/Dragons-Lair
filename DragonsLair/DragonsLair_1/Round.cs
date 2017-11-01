@@ -24,27 +24,8 @@ namespace DragonsLair_1
         {
             //ikke del af template
             Match match = new Match();
-            match.FirstOpponent.Name = teamName1;
-            match.SecondOpponent.Name = teamName2;
-            //teamName1 = "";
-            //teamName2 = "";
-            // TODO: Implement this method
-            //foreach (Match x in matches) {
-            //    if (teamName1 == "")
-            //    {
-            //        teamName1 = x.FirstOpponent.Name;
-            //    }
-            //    if(teamName1 != "" && teamName2 == "")
-            //    {
-            //        teamName2 = x.SecondOpponent.Name;
-            //    }
-            //    if(teamName1 != "" && teamName2 != "")
-            //    {
-            //        a.FirstOpponent = new Team(teamName1);
-            //        a.SecondOpponent = new Team(teamName2);
-            //        break;
-            //    }
-            //}
+            match.FirstOpponent = new Team(teamName1);
+            match.SecondOpponent = new Team(teamName2);
             return match;
             
             
